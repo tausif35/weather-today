@@ -70,7 +70,7 @@ function searchCity(e) {
             hour -= 12;
             text = "pm";
           }
-          if ((hour > 7 && text == "pm") || (hour < 6 && text == "am")) {
+          if ((hour >= 7 && text == "pm") || ((hour < 6 || hour ==12) && text == "am")) {
             upperhalf.style.backgroundImage = "url('img/nightimg.svg')";
             cityName.style.color = "white";
             countryName.style.color = "white";
