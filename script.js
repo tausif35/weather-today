@@ -66,9 +66,13 @@ function searchCity(e) {
           }
 
           var text = "am";
-          if (hour > 12) {
-            hour -= 12;
-            text = "pm";
+          if(hour>12){
+            hour-=12
+            text="pm"
+          }
+          if(hour>12){
+            hour-=12
+            text="am"
           }
           if ((hour >= 7 && text == "pm") || ((hour < 6 || hour ==12) && text == "am")) {
             upperhalf.style.backgroundImage = "url('img/nightimg.svg')";
